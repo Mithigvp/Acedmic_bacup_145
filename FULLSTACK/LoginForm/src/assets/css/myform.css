@@ -1,0 +1,72 @@
+.page {
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: #f5f5f5;
+}
+
+
+
+.student-form {
+  width: 100%;
+  max-width: 360px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.student-form h1 {
+  margin: 0 0 8px;
+  font-size: 24px;
+  letter-spacing: normal;
+  text-align: center;
+  color:#222
+}
+
+.student-form label {
+  color: #222;
+  font-size: 17px;
+}
+
+.student-form input {
+  width: 100%;
+  padding: 9px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.student-form button {
+  margin-top: 8px;
+  padding: 10px;
+  border: 0;
+  border-radius: 4px;
+  background: #333;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #000;
+}
+
+.disp-parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.disp { margin-top: 24px; padding: 16px; border: 1px solid #ccc; border-radius: 8px; }
+.disp p { margin: 0 0 8px; overflow-wrap: anywhere; }
+.disp p:last-child { margin-bottom: 0; }

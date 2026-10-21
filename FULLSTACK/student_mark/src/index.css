@@ -1,0 +1,219 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1f2937;
+  background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+.container,
+.marksheet {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+  padding: 28px;
+  margin-bottom: 28px;
+}
+
+h1,
+h2 {
+  margin: 0 0 18px;
+  color: #111827;
+}
+
+h1 {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  text-align: center;
+}
+
+.section {
+  margin-top: 26px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 18px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-group label,
+.table-row label {
+  font-weight: 600;
+  color: #374151;
+}
+
+.field-group input,
+.field-group select,
+.table-row input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 10px;
+  background: #f9fafb;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field-group input:focus,
+.field-group select:focus,
+.table-row input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
+  background: #ffffff;
+}
+
+.marks-table {
+  display: grid;
+  gap: 12px;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.table-header {
+  font-weight: 700;
+  color: #111827;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.table-row {
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.generate-btn {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  margin: 20px auto 0;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  font-weight: 700;
+  padding: 14px 20px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.generate-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(79, 70, 229, 0.3);
+}
+
+.empty-sheet {
+  text-align: center;
+  font-size: 1.05rem;
+  color: #4b5563;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  padding: 18px 20px;
+}
+
+.student-info {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 14px 24px;
+  margin-bottom: 24px;
+}
+
+.student-info p {
+  margin: 0;
+  color: #1f2937;
+}
+
+.student-info b {
+  color: #111827;
+}
+
+.marksheet table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.marksheet th,
+.marksheet td {
+  text-align: left;
+  padding: 12px 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.marksheet thead th {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.status-pass {
+  color: #166534;
+  font-weight: 700;
+}
+
+.status-fail {
+  color: #991b1b;
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .form-grid,
+  .student-info,
+  .table-header {
+    grid-template-columns: 1fr;
+  }
+
+  .table-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .table-row label {
+    grid-column: 1 / -1;
+  }
+
+  .container,
+  .marksheet {
+    padding: 20px 16px;
+  }
+}
